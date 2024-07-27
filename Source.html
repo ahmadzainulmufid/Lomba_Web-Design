@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTO AI</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* Inline CSS for demonstration */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+        }
+
+        .navbar-logo {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item {
+            margin-left: 20px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ff6347; /* Transition color */
+        }
+
+        .nav-item .active {
+            color: #ff6347; /* Active color */
+        }
+
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .technology-logos img {
+            height: 50px;
+            margin: 0 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .technology-logos img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">GoTO AI</a>
+        <div class="menu-icon" id="menu-icon">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="Home.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="History.html" class="nav-link">History</a></li>
+            <li class="nav-item"><a href="Implementation.html" class="nav-link">Implementation</a></li>
+            <li class="nav-item"><a href="Team.html" class="nav-link">Team</a></li>
+            <li class="nav-item"><a href="Source.html" class="nav-link active">Source</a></li>
+        </ul>
+    </nav>
+
+    <!-- Photos -->
+    <div class="container py-5">
+        <h3 class="text-center mb-4">Photos</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card">
+                    <img src="Gambar/Ahmad Zainul Mufid(foto).jpg" class="card-img-top" alt="Photo 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Photo Title 1</h5>
+                        <p class="card-text">Description of Photo 1.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="Gambar/Muhammad Fajrul Falah.jpeg" class="card-img-top" alt="Photo 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Photo Title 2</h5>
+                        <p class="card-text">Description of Photo 2.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="path/to/photo3.jpg" class="card-img-top" alt="Photo 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Photo Title 3</h5>
+                        <p class="card-text">Description of Photo 3.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technology -->
+    <div class="container py-5 text-center">
+        <h3>Technology</h3>
+        <div class="technology-logos">
+            <img src="Gambar/HTML5_logo_and_wordmark.svg.png" alt="HTML Logo">
+            <img src="Gambar/kisspng-css3-cascading-style-sheets-logo-html-logo-5abbf51bcb7d93.3094819215222674198335.jpg" alt="CSS Logo" style="margin-left: 10px;">
+            <img src="Gambar/JavaScript-Logo.png" alt="JavaScript Logo" style="margin-left: -15px">
+            <img src="Gambar/cloud-lockup-logo-500px.png" alt="Google Cloud Logo" style="margin-left: -15px">
+        </div>
+    </div>
+
+    <script src="JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
