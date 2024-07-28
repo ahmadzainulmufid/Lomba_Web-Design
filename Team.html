@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoTO AI</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        /* Inline CSS for demonstration */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+        }
+
+        .navbar-logo {
+            color: white;
+            font-size: 24px;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-item {
+            margin-left: 20px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ff6347; /* Transition color */
+        }
+
+        .nav-item .active {
+            color: #ff6347; /* Active color */
+        }
+
+        .social-links a {
+            text-decoration: none;
+            font-size: 20px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff6347; /* Hover color */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="navbar-logo">GoTO AI</a>
+        <div class="menu-icon" id="menu-icon">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+            <li class="nav-item"><a href="Index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="History.html" class="nav-link">History</a></li>
+            <li class="nav-item"><a href="Implementation.html" class="nav-link">Implementation</a></li>
+            <li class="nav-item"><a href="Team.html" class="nav-link active">Team</a></li>
+            <li class="nav-item"><a href="Source.html" class="nav-link">Source</a></li>
+        </ul>
+    </nav>
+
+    <!-- Menu Team -->
+    <div class="container text-center py-5" id="team-section">
+        <h3>Meet Our Team Members</h3>
+        <h4 class="text-muted">“We focus on the details of everything we do. By harnessing the power of AI, people can be helped from all aspects of need around the world to focus on what matters most to them, freeing them from routine work and opening up new opportunities.”</h4>
+        <div class="row row-cols-1 row-cols-md-3 g-4 py-5 justify-content-center">
+            <div class="col">
+              <div class="card">
+                <div class="card-img-container">
+                    <img src="Gambar/Ahmad Zainul Mufid(foto).jpg" class="card-img-top" alt="Ahmad Zainul Mufid">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Ahmad Zainul Mufid</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, neque.</p>
+                </div>
+                <div class="d-flex justify-content-evenly p-4 social-links">
+                    <a href="https://github.com/ahmadzainulmufid" target="_blank" class="bi bi-github"></a>
+                    <a href="https://www.linkedin.com/in/ahmad-zainul-mufid-b29b91219/" target="_blank" class="bi bi-linkedin"></a>
+                    <a href="https://wa.me/+6288294258864" target="_blank" class="bi bi-whatsapp"></a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <div class="card-img-container">
+                    <img src="Gambar/Muhammad Fajrul Falah.jpeg" class="card-img-top" alt="Muhammad Fajrul Falah">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Muhammad Fajrul Falah</h5>
+                  <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis, neque.</p>
+                </div>
+                <div class="d-flex justify-content-evenly p-4 social-links">
+                    <a href="https://github.com/fajrulfalah28" target="_blank" class="bi bi-github"></a>
+                    <a href="https://www.linkedin.com/in/muhammad-fajrul-falah-213100231/" target="_blank" class="bi bi-linkedin"></a>
+                    <a href="https://wa.me/+6281315509677" target="_blank" class="bi bi-whatsapp"></a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
