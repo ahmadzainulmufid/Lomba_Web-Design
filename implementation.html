@@ -71,32 +71,40 @@
         <div
             class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full max-w-xs md:max-w-2xl lg:max-w-4xl">
             <form>
-                <div class="flex flex-col items-center">
-                    <img src=".idx/icon.png" alt="Gemini" class="w-12 h-12 mb-6" />
+                <div class="flex md:flex-col justify-center items-center space-x-1 mb-2 md:space-x-0 md:space-y-6">
+                    <img src=".idx/icon.png" alt="Gemini" class="w-7 h-7 md:w-12 md:h-12" />
+                    <a class="bg-gradient-to-tr from-cyan-500 via-indigo-400 to-rose-500 bg-clip-text text-transparent font-bold text-4xl md:text-6xl text-center bg-cover"> Gemini AI</a>
                 </div>
-                <div class="flex flex-col">
-                <a
-                    class="bg-gradient-to-tr from-cyan-500 via-indigo-400 to-rose-500 bg-clip-text text-transparent font-bold text-5xl md:text-6xl text-center bg-cover mb-2">Gemini
-                    AI</a>
-                <a class="text-white text-mono text-xs md:text-base text-center">Imagine talking with AI as
-                    effortlessly as chatting with a friend, ideas flowing freely between human and machine.</a>
-                </div>
-                
 
-                <div class="flex flex-col md:flex-row justify-between items-center mt-6 md:space-x-4">
+                <div class="flex flex-col">
+                    <a class="text-white text-mono text-xs md:text-base text-center">Imagine talking with AI as
+                        effortlessly as chatting with a friend, ideas flowing freely between human and machine.</a>
+                </div>
+
+
+                <div class="flex flex-col md:flex-row justify-between items-center mt-6 md:space-x-6">
                     <input name="prompt" type="text" placeholder="Input your question here" maxlength="100"
                         class="w-full md:w-full text-white text-xs md:text-base bg-gray-950/40 backdrop-blur-lg rounded-full p-3 pl-4 md:pl-6 md:p-3 md:pl-5 lg:p-4 lg:pl-8 shadow-lg border-2 border-white/10 focus:outline-none flex-1" />
-                    <button type="submit"
-                        class="w-full border-0 md:w-28 lg:w-32 bg-gradient-to-tr from-cyan-500 via-indigo-400 to-rose-500 hover:from-indigo-400 hover:to-rose-500 hover:shadow-[0_4px_24px_rgba(255,255,255,0.25)] text-gray text-sm md:text-base lg:text-xl font-bold md:px-4 lg:px-6 py-2 md:py-3 lg:py-3.5 mt-2 md:mt-0 rounded-full">
-                        Ask Me!
-                    </button>
+                    <div class="flex w-full md:w-auto items-center space-x-1 md:space-x-2 mt-2 md:mt-0">
+                        <label for="fileInput" class=" px-[0.85rem] py-[0.55rem] md:w-12 md:h-12 lg:w-[3.75rem] lg:h-[3.75rem]  bg-gradient-to-tr from-cyan-500 via-indigo-400 to-rose-500 hover:from-indigo-400 hover:to-rose-500 hover:shadow-[0_4px_24px_rgba(255,255,255,0.25)] text-gray rounded-full flex items-center justify-center cursor-pointer">
+                            <i class="fas fa-file text-sm md:text-xl lg:text-2xl"></i>
+                            <input type="file" id="fileInput" name="file" accept="image/*" class="hidden">
+                        </label>
+                        <button type="submit"
+                            class="w-full border-0 md:w-28 lg:w-32 bg-gradient-to-tr from-cyan-500 via-indigo-400 to-rose-500 hover:from-indigo-400 hover:to-rose-500 hover:shadow-[0_4px_24px_rgba(255,255,255,0.25)] text-gray text-sm md:text-base lg:text-xl font-bold md:px-4 lg:px-6 py-2 md:py-3 lg:py-3.5 rounded-full">
+                            Ask Me!
+                        </button>
+                    </div>
                 </div>
 
-                <div
-                    class="flex flex-row bg-gray-950/40 backdrop-blur-lg rounded-lg px-3 py-4 md:px-8 md:py-4 shadow-lg border-2 border-white/10 mt-12">
-                    <img src=".idx/icon.png" alt="Gemini" class="w-4 h-4 md:w-6 md:h-6" />
-                    <p class="output text-left pl-2 md:pl-4 text-xs md:text-sm md:text-base">Hey! Im Gemini, an AI
-                        from Google.<br> I will help you about your concern, feel free to ask me! :D</p>
+                <div class="flex flex-col bg-gray-950/40 backdrop-blur-lg rounded-lg px-3 py-4 md:px-8 md:py-4 shadow-lg border-2 border-white/10 mt-12">
+                    <div class="relative ">
+                        <img class="image-preview hidden w-full mb-3 md:mb-6 h-16 md:h-32 rounded-lg shadow-lg object-cover hover:opacity-75 cursor-pointer" id="image-preview" onclick="hideImagePreview()">
+                    </div>
+                    <div class="flex flex-row">
+                        <img src=".idx/icon.png" alt="Gemini" class="w-4 h-4 md:w-6 md:h-6" />
+                        <p class="output text-left pl-2 md:pl-4 text-xs md:text-sm md:text-base">Hey! Im Gemini, an AI from Google.<br> I will help you about your concern, feel free to ask me! :D</p>
+                    </div>
                 </div>
                 <p class="text-white text-xs md:text-sm text-center pt-4">Gemini may display inaccurate info,
                     including about people, so double-check its responses. <span><a href="https://gemini.google.com/app"
@@ -173,6 +181,25 @@
     function toggleMenu() {
         var menu = document.getElementById("menu");
         menu.classList.toggle("hidden");
+    }
+</script>
+
+<script>
+    function previewImage(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                document.getElementById('image-preview').src = e.target.result;
+                document.getElementById('image-preview-container').classList.remove('hidden');
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    function hideImagePreview() {
+        document.getElementById('image-preview').src = '';
+        document.getElementById('image-preview').style.display = 'none';
+        document.getElementById('image-preview-container').classList.add('hidden');
     }
 </script>
 
