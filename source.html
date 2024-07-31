@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kun Fayakun</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&display=block">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-950 text-white text-body overflow-x-hidden">
+    <nav class="hidden md:flex py-6 navbar bg-transparent">
+        <div class="container mx-auto flex justify-between items-center px-8">
+            <div>
+                <a href="#" class="text-white font-bold text-2xl">Kun Fayakun</a>
+            </div>
+            <div>
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="hover:text-cyan-300">Home</a></li>
+                    <li><a href="history.html" class="hover:text-cyan-300">History</a></li>
+                    <li><a href="implementation.html" class="hover:text-cyan-300">Implementation</a></li>
+                    <li><a href="team.html" class="hover:text-cyan-300">Team</a></li>
+                    <li><a href="source.html"
+                            class="hover:text-cyan-300 underline underline-offset-2 decoration-cyan-300">Source</a></li>
+                     
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="flex md:hidden py-6 navbar bg-transparent ">
+        <div class="container mx-auto flex flex-col">
+            <div class="flex flex-row justify-between items-center px-6">
+                <a href="#" class="text-white font-bold text-2xl">Kun Fayakun</a>
+                <span class="material-icons" onclick="toggleMenu()">menu</span>
+            </div>
+            <div id="menu" class="hidden">
+                <ul class="flex flex-col mt-6 space-y-2 justify-center items-center w-full">
+                    <li class="w-full">
+                        <a href="index.html" class="block px-6 py-2 hover:bg-gray-700 rounded-md">Home</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="history.html" class="block px-6 py-2 hover:bg-gray-700 rounded-md">History</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="implementation.html"
+                            class="block px-6 py-2 hover:bg-gray-700 rounded-md">Implementation</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="team.html" class="block px-6 py-2 hover:bg-gray-700 rounded-md">Team</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="source.html"
+                            class="block px-6 py-2 bg-cyan-500 text-gray-950 font-bold rounded-md">Source</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto flex flex-col items-center text-center px-4">
+        <h1
+            class="bg-gradient-to-br from-cyan-500 to-cyan-200 bg-clip-text text-transparent font-bold text-4xl md:text-6xl pt-12 pb-4 px-6 md:px-0">
+            Welcome to our Resources section</h1>
+        <p class="text-xs md:text-base px-6 md:px-0">Here you will find photos / videos as well as a list of the cutting-edge technologies we use to
+            realize our projects. Explore and get to know the tools and resources that used in our projects.</p>
+    </div>
+
+    <div data-aos="fade-up" data-aos-duration="1000" class="container mx-auto flex flex-col items-start text-left px-6 md:px-0">
+        <h2
+            class="bg-gradient-to-br from-cyan-500 to-cyan-200 bg-clip-text text-transparent font-bold text-2xl md:text-4xl pt-12">
+            Photos</h2>
+    </div>
+
+    <div class="container py-5 mx-auto px-6 md:px-0">
+        <div class="flex flex-col md:flex-row md:space-x-4">
+            <div data-aos="fade-up" data-aos-duration="1000" class="w-full md:w-1/3 mb-4 md:mb-8">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg h-full">
+                    <img src="https://img.freepik.com/free-photo/technology-human-touch-background-modern-remake-creation-adam_53876-129794.jpg?t=st=1722381536~exp=1722385136~hmac=1dc19492939bf0a3a6233c5dedc8bf1ec58a8aec01e9133c96b03b5bff0de778&w=1380"
+                        class="w-full h-48 object-cover" alt="Photo 1">
+                    <div class="p-4">
+                        <h5 class="text-xl font-semibold">Modern remake of The Creation of Adam</h5>
+                        <a href="https://www.freepik.com/free-photo/technology-human-touch-background-modern-remake-creation-adam_17851045.htm#query=robot%20hand&position=34&from_view=keyword&track=ais_user&uuid=687f2611-75bb-45b2-a714-67f4512dd512"
+                            class="mt-2 inline-block px-4 py-2 text-xs md:text-base md:px-4 md:py-2 bg-gradient-to-br from-cyan-500 to-cyan-200 hover:from-cyan-600 hover:to-cyan-300 text-gray-950 font-bold rounded">Source</a>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" class="w-full md:w-1/3 mb-4 md:mb-8">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg h-full">
+                    <img src="https://cdn.pixabay.com/photo/2022/02/17/00/57/david-7017729_1280.jpg"
+                        class="w-full h-48 object-cover" alt="Photo 2">
+                    <div class="p-4">
+                        <h5 class="text-xl font-semibold">David robot technology digital</h5>
+                        <a href="https://pixabay.com/photos/david-robot-technology-digital-7017729/"
+                        class="mt-2 inline-block px-4 py-2 text-xs md:text-base md:px-4 md:py-2 bg-gradient-to-br from-cyan-500 to-cyan-200 hover:from-cyan-600 hover:to-cyan-300 text-gray-950 font-bold rounded">Source</a>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" class="w-full md:w-1/3 mb-4 md:mb-8">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg h-full">
+                    <img src="https://img.freepik.com/free-photo/anthropomorphic-robot-indoors_23-2150405626.jpg?t=st=1722381499~exp=1722385099~hmac=6e35f92fc9b5be9881407f57e86f0feb64bfca594bd4e713ba12aaa041749573&w=740"
+                        class="w-full h-48 object-cover" alt="Photo 3">
+                    <div class="p-4">
+                        <h5 class="text-xl font-semibold">Anthropomorphic robot indoors</h5>
+                        <a href="https://www.freepik.com/free-ai-image/anthropomorphic-robot-indoors_42621410.htm#fromView=search&page=1&position=47&uuid=7cec4a84-b5ab-4001-b0d5-c5cfcf345248"
+                        class="mt-2 inline-block px-4 py-2 text-xs md:text-base md:px-4 md:py-2 bg-gradient-to-br from-cyan-500 to-cyan-200 hover:from-cyan-600 hover:to-cyan-300 text-gray-950 font-bold rounded">Source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-aos="fade-up" data-aos-duration="1000" class="container mx-auto flex flex-col items-start text-left px-6 md:px-0">
+        <h2
+            class="bg-gradient-to-br from-cyan-500 to-cyan-200 bg-clip-text text-transparent font-bold text-2xl md:text-4xl pt-12">
+            Videos</h2>
+    </div>
+
+    <div class="container py-5 mx-auto px-6 md:px-0">
+        <div class="flex flex-col md:flex-row md:space-x-4">
+            <div data-aos="fade-up" data-aos-duration="1000" class="w-full md:w-1/2 mb-4 md:mb-8">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg h-full"> <video
+                        src="Gambar/Wall-E Clip.mp4" class="w-full h-48 object-cover" autoplay muted loop></video>
+                    <div class="p-4">
+                        <h5 class="text-xl font-semibold">Wall-E Clip</h5> <a href="https://www.youtube.com/watch?v=s-kdRdzxdZQ&t=1s"
+                        class="mt-2 inline-block px-4 py-2 text-xs md:text-base md:px-4 md:py-2 bg-gradient-to-br from-cyan-500 to-cyan-200 hover:from-cyan-600 hover:to-cyan-300 text-gray-950 font-bold rounded">Source</a>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="1000" class="w-full md:w-1/2 mb-4 md:mb-8">
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg h-full"> <video src="Gambar/GeminiDemo.mp4"
+                        class="w-full h-48 object-cover" autoplay muted loop></video>
+                    <div class="p-4">
+                        <h5 class="text-xl font-semibold">Gemini Demo</h5> <a href="https://www.youtube.com/watch?v=_fuimO6ErKI"
+                        class="mt-2 inline-block px-4 py-2 text-xs md:text-base md:px-4 md:py-2 bg-gradient-to-br from-cyan-500 to-cyan-200 hover:from-cyan-600 hover:to-cyan-300 text-gray-950 font-bold rounded">Source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div data-aos="fade-up" data-aos-duration="1000" class="container mx-auto flex flex-col items-center md:items-start text-left px-6 md:px-0">
+        <h2
+            class="bg-gradient-to-br from-cyan-500 to-cyan-200 bg-clip-text text-transparent font-bold text-2xl md:text-4xl pt-12 pb-8">
+            Technology Used</h2>
+    </div>
+
+    <div class="container mb-12 md:mb-24 mx-auto flex flex-wrap gap-6 md:gap-8 lg:gap-10 px-6 md:px-0 justify-center md:justify-start items-center md:items-start">
+        <div data-aos="fade-up" data-aos-duration="1000" class="group w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full"> 
+            <img src="https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png" alt="HTML Logo" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 ease-in-out" />
+        </div>
+        <div data-aos="fade-up" data-aos-duration="500" class="group w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/512px-CSS3_logo.svg.png?20210705212817" alt="CSS Logo" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 ease-in-out" />
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" class="group w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full">
+            <img src="https://www.w3schools.com/whatis/img_js.png" alt="JavaScript Logo" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 ease-in-out" />
+        </div>
+        <div data-aos="fade-up" data-aos-duration="500" class="group w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full">
+            <img src="https://developers.google.com/static/idx/images/icon-192.png" alt="Project IDX Logo" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 ease-in-out" />
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" class="group w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full">
+            <img src=".idx/icon.png" alt="Gemini Logo" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 ease-in-out" />
+        </div>
+        <div data-aos="fade-up" data-aos-duration="500" class="group w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/512px-Tailwind_CSS_Logo.svg.png?20230715030042" alt="Tailwind Logo" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 ease-in-out" />
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" class="group w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-lg">
+            <img src="https://ps.w.org/font-awesome/assets/icon-256x256.png?rev=1991998" alt="Tailwind Logo" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 ease-in-out rounded-lg" />
+        </div>
+        <div data-aos="fade-up" data-aos-duration="500" class="group w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded-full">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Tailwind Logo" class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300 ease-in-out filter grayscale brightness-0 invert" />
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 md:pt-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col mx-6 md:mx-0 md:flex-row md:space-x-32">
+                <div class="about mb-6 md:mb-0 md:w-2/3">
+                    <h4 class="font-bold text-base md:text-xl mb-4">Kun Fayakun</h4>
+                    <p class="mb-4 text-xs md:text-base">Kun Fayakun, a passionate team of aspiring web designer from
+                        Politeknik
+                        Negeri Jakarta, with creativity as our cornerstone and innovation as our core values, we're
+                        ready to
+                        showcase our skills at the iTechno 2024 Web Design Competition. Our team name, "Kun Fayakun"
+                        which
+                        translates to "Jadilah, maka jadilah." represents our ability to transform ideas into reality
+                        through the
+                        power of web design.</p>
+                </div>
+                <div class="contact-info md:w-1/3 flex flex-col">
+                    <h4 class="font-bold text-base md:text-xl mb-4">Our Socials</h4>
+                    <div class="text-xs md:text-base space-y-4 w-full">
+                        <div class="flex flex-col">
+                            <p>Muhammad Fajrul Falah</p>
+                            <div class="social-icons flex md:space-x-4">
+                                <a href="https://www.instagram.com/fajrul.falah28/"
+                                    class="bg-medium-gray pr-2 py-2 rounded text-xl md:text-base"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/muhammad-fajrul-falah-213100231/"
+                                    class="bg-medium-gray p-2 rounded text-xl md:text-base"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/fajrulfalah28"
+                                    class="bg-medium-gray p-2 rounded text-xl md:text-base"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <p>Ahmad Zainul Mufid</p>
+                            <div class="social-icons flex md:space-x-4">
+                                <a href="https://www.instagram.com/ahmadzainulmfd_/"
+                                    class="bg-medium-gray pr-2 py-2 rounded text-xl md:text-base"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/ahmad-zainul-mufid-b29b91219/"
+                                    class="bg-medium-gray p-2 rounded text-xl md:text-base"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/ahmadzainulmufid/"
+                                    class="bg-medium-gray p-2 text-xl md:text-base rounded"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="border-gray-700 my-8">
+        <div class="text-center text-xs md:text-base">
+            <p>Kun Fayakun © 2024, All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>

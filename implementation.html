@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kun Fayakun</title>
+    <link rel="stylesheet" href="CSS/font.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&display=block">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-950 text-white text-body overflow-x-hidden m-0">
+    <nav class="hidden md:flex py-6 navbar bg-transparent">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <a href="#" class="text-white font-bold text-2xl">Kun Fayakun</a>
+            </div>
+            <div>
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="hover:text-cyan-300 ">Home</a></li>
+                    <li><a href="history.html" class="hover:text-cyan-300">History</a></li>
+                    <li><a href="implementation.html"
+                            class="hover:text-cyan-300 underline underline-offset-2 decoration-cyan-300">Implementation</a>
+                    </li>
+                    <li><a href="team.html" class="hover:text-cyan-300">Team</a></li>
+                    <li><a href="source.html" class="hover:text-cyan-300">Source</a></li>  
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="flex md:hidden py-6 navbar bg-transparent ">
+        <div class="container mx-auto flex flex-col">
+            <div class="flex flex-row justify-between items-center px-6">
+                <a href="#" class="text-white font-bold text-2xl">Kun Fayakun</a>
+                <span class="material-icons" onclick="toggleMenu()">menu</span>
+            </div>
+            <div id="menu" class="hidden">
+                <ul class="flex flex-col mt-6 space-y-2 justify-center items-center w-full">
+                    <li class="w-full">
+                        <a href="index.html" class="block px-6 py-2 hover:bg-gray-700 rounded-md">Home</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="history.html" class="block px-6 py-2 hover:bg-gray-700 rounded-md">History</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="implementation.html"
+                            class="block px-6 py-2 bg-cyan-500 text-gray-950 font-bold rounded-md">Implementation</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="team.html" class="block px-6 py-2 hover:bg-gray-700 rounded-md">Team</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="source.html" class="block px-6 py-2 hover:bg-gray-700 rounded-md">Source</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="relative w-full h-screen overflow-hidden">
+        <video autoplay loop muted class="absolute top-0 left-0 w-full h-full object-cover">
+            <source src="Gambar/GeminiDemo.mp4" type="video/mp4">
+        </video>
+
+        <div class="absolute top-0 left-0 w-full h-full bg-black/90"></div>
+
+        <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full max-w-xs md:max-w-2xl lg:max-w-4xl">
+            <form>
+                <div class="flex flex-col items-center">
+                    <img src=".idx/icon.png" alt="Gemini" class="w-12 h-12 mb-6" />
+                </div>
+                <div class="flex flex-col">
+                <a
+                    class="bg-gradient-to-tr from-cyan-500 via-indigo-400 to-rose-500 bg-clip-text text-transparent font-bold text-5xl md:text-6xl text-center bg-cover mb-2">Gemini
+                    AI</a>
+                <a class="text-white text-mono text-xs md:text-base text-center">Imagine talking with AI as
+                    effortlessly as chatting with a friend, ideas flowing freely between human and machine.</a>
+                </div>
+                
+
+                <div class="flex flex-col md:flex-row justify-between items-center mt-6 md:space-x-4">
+                    <input name="prompt" type="text" placeholder="Input your question here" maxlength="100"
+                        class="w-full md:w-full text-white text-xs md:text-base bg-gray-950/40 backdrop-blur-lg rounded-full p-3 pl-4 md:pl-6 md:p-3 md:pl-5 lg:p-4 lg:pl-8 shadow-lg border-2 border-white/10 focus:outline-none flex-1" />
+                    <button type="submit"
+                        class="w-full border-0 md:w-28 lg:w-32 bg-gradient-to-tr from-cyan-500 via-indigo-400 to-rose-500 hover:from-indigo-400 hover:to-rose-500 hover:shadow-[0_4px_24px_rgba(255,255,255,0.25)] text-gray text-sm md:text-base lg:text-xl font-bold md:px-4 lg:px-6 py-2 md:py-3 lg:py-3.5 mt-2 md:mt-0 rounded-full">
+                        Ask Me!
+                    </button>
+                </div>
+
+                <div
+                    class="flex flex-row bg-gray-950/40 backdrop-blur-lg rounded-lg px-3 py-4 md:px-8 md:py-4 shadow-lg border-2 border-white/10 mt-12">
+                    <img src=".idx/icon.png" alt="Gemini" class="w-4 h-4 md:w-6 md:h-6" />
+                    <p class="output text-left pl-2 md:pl-4 text-xs md:text-sm md:text-base">Hey! Im Gemini, an AI
+                        from Google.<br> I will help you about your concern, feel free to ask me! :D</p>
+                </div>
+                <p class="text-white text-xs md:text-sm text-center pt-4">Gemini may display inaccurate info,
+                    including about people, so double-check its responses. <span><a href="https://gemini.google.com/app"
+                            class="text-blue-400 inline text-xs md:text-sm">Learn more.</a></span></p>
+        </div>
+        </form>
+    </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 md:pt-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col mx-6 md:mx-0 md:flex-row md:space-x-32">
+                <div class="about mb-6 md:mb-0 md:w-2/3">
+                    <h4 class="font-bold text-base md:text-xl mb-4">Kun Fayakun</h4>
+                    <p class="mb-4 text-xs md:text-base">Kun Fayakun, a passionate team of aspiring web designer from
+                        Politeknik
+                        Negeri Jakarta, with creativity as our cornerstone and innovation as our core values, we're
+                        ready to
+                        showcase our skills at the iTechno 2024 Web Design Competition. Our team name, "Kun Fayakun"
+                        which
+                        translates to "Jadilah, maka jadilah." represents our ability to transform ideas into reality
+                        through the
+                        power of web design.</p>
+                </div>
+                <div class="contact-info md:w-1/3 flex flex-col">
+                    <h4 class="font-bold text-base md:text-xl mb-4">Our Socials</h4>
+                    <div class="text-xs md:text-base space-y-4 w-full">
+                        <div class="flex flex-col">
+                            <p>Muhammad Fajrul Falah</p>
+                            <div class="social-icons flex md:space-x-4">
+                                <a href="https://www.instagram.com/fajrul.falah28/"
+                                    class="bg-medium-gray pr-2 py-2 rounded text-xl md:text-base"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/muhammad-fajrul-falah-213100231/"
+                                    class="bg-medium-gray p-2 rounded text-xl md:text-base"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/fajrulfalah28"
+                                    class="bg-medium-gray p-2 rounded text-xl md:text-base"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <p>Ahmad Zainul Mufid</p>
+                            <div class="social-icons flex md:space-x-4">
+                                <a href="https://www.instagram.com/ahmadzainulmfd_/"
+                                    class="bg-medium-gray pr-2 py-2 rounded text-xl md:text-base"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/ahmad-zainul-mufid-b29b91219/"
+                                    class="bg-medium-gray p-2 rounded text-xl md:text-base"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/ahmadzainulmufid/"
+                                    class="bg-medium-gray p-2 text-xl md:text-base rounded"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="border-gray-700 my-8">
+        <div class="text-center text-xs md:text-base">
+            <p>Kun Fayakun © 2024, All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.classList.toggle("hidden");
+    }
+</script>
+
+<script type="module" src="main.js"></script>
+<script src="JS/script.js"></script>
+
+</html>

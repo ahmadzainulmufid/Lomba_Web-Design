@@ -28,16 +28,16 @@ const model = genAI.getGenerativeModel({
 const chat = model.startChat({
   history: [], 
   generationConfig: {
-    maxOutputTokens: 1000
+    maxOutputTokens: 3000
   } 
 });
 
 form.onsubmit = async (ev) => {
   ev.preventDefault();
-  output.textContent = 'Generating...';
+  output.textContent = 'Hold tight, let me think...';
 
   try {
-    const prompt = promptInput.value;
+    const prompt = "Talk like you're a human" + promptInput.value + "but make it under 2000 character, add a invisible space between paragraph";
     console.log("Prompt:", prompt);  // Log the prompt for debugging
 
     const result = await chat.sendMessageStream(prompt);
@@ -45,6 +45,7 @@ form.onsubmit = async (ev) => {
 
     let buffer = [];
     let md = new MarkdownIt();
+
     for await (let response of result.stream) {
       console.log("Response:", response);  // Log each response for debugging
       buffer.push(response.text());

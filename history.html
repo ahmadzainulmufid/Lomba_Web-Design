@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kun Fayakun</title>
+    <link rel="stylesheet" href="CSS/font.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&display=block">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #1F2937;
+            color: white;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #CBD5E0;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-950 text-white text-body overflow-x-hidden">
+    <nav class="hidden md:flex py-6 navbar bg-transparent">
+        <div class="container mx-auto flex justify-between items-center">
+            <div>
+                <a href="#" class="text-white font-bold text-2xl">Kun Fayakun</a>
+            </div>
+            <div>
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="hover:text-cyan-300">Home</a></li>
+                    <li><a href="history.html"
+                            class="hover:text-cyan-300 underline underline-offset-2 decoration-cyan-300">History</a>
+                    </li>
+                    <li><a href="implementation.html" class="hover:text-cyan-300">Implementation</a></li>
+                    <li><a href="team.html" class="hover:text-cyan-300">Team</a></li>
+                    <li><a href="source.html" class="hover:text-cyan-300">Source</a></li>  
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="flex md:hidden py-6 navbar bg-transparent ">
+        <div class="container mx-auto flex flex-col">
+            <div class="flex flex-row justify-between items-center px-6">
+                <a href="#" class="text-white font-bold text-2xl">Kun Fayakun</a>
+                <span class="material-icons" onclick="toggleMenu()">menu</span>
+            </div>
+            <div id="menu" class="hidden">
+                <ul class="flex flex-col mt-6 space-y-2 justify-center items-center w-full">
+                    <li class="w-full">
+                        <a href="index.html" class="block px-6 py-2 hover:bg-gray-700 rounded-md">Home</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="history.html"
+                            class="block px-6 py-2 bg-cyan-500 text-gray-950 font-bold rounded-md">History</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="implementation.html"
+                            class="block px-6 py-2 hover:bg-gray-700 rounded-md">Implementation</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="team.html" class="block px-6 py-2 hover:bg-gray-700 rounded-md">Team</a>
+                    </li>
+                    <li class="w-full">
+                        <a href="source.html" class="block px-6 py-2 hover:bg-gray-700 rounded-md">Source</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto flex items-center justify-center flex-col" data-aos="fade-up">
+        <div class="w-1/3 relative">
+            <img src="Gambar/Robot David.png" alt="Your Image" class="w-full h-full object-cover">
+            <div class="absolute bottom-0 left-0 w-full h-2/3 bg-gradient-to-t from-gray-950 to-transparent"></div>
+        </div>
+
+        <h1
+            class="bg-gradient-to-br from-cyan-500 to-cyan-200 bg-clip-text text-transparent font-bold text-6xl text-center px-6 md:pt-12 pb-4">
+            A Brief History</h1>
+        <p class="text-white text-mono text-base text-center px-10">The history of Artificial Intelligence</p>
+    </div>
+
+    <div class="container mx-auto my-12 timeline relative">
+        <div class="relative wrap overflow-hidden p-10 h-full">
+            <div class="border-2-2 border-white absolute top-0 bottom-0 left-1/2 transform -translate-x-1/2 h-full">
+            </div>
+
+            <div class="mb-8 flex justify-between items-center w-full right-timeline" data-aos="fade-left">
+                <div class="order-1 hidden md:flex w-5/12"></div>
+                <div class="order-1 w-full md:w-5/12 px-6 py-4 bg-gray-800 rounded-lg shadow-md">
+                    <h3 class="font-bold text-white text-xl">Initial Concept</h3>
+                    <p class="text-sm mb-3 leading-snug tracking-wide text-gray-400 text-opacity-100">1950</p>
+                    <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">In 1950, Alan Turing, an
+                        English mathematician, proposed a test now known as the Turing Test to determine whether a
+                        machine could think. In his paper titled "Computing Machinery and Intelligence," he stated that
+                        if a machine could mimic human conversation so well that a person could not distinguish it, then
+                        the machine could be considered intelligent.</p>
+                </div>
+            </div>
+
+            <div class="mb-8 flex justify-between items-center w-full left-timeline" data-aos="fade-right">
+                <div class="order-1 w-full md:w-5/12 px-6 py-4 bg-gray-800 rounded-lg shadow-md">
+                    <h3 class="font-bold text-white text-xl">Birth of AI as a Discipline</h3>
+                    <p class="text-sm mb-3 leading-snug tracking-wide text-gray-400 text-opacity-100">1956</p>
+                    <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">This year marks the
+                        starting point of AI as a discipline at the Dartmouth Summer Research Project on Artificial
+                        Intelligence (Dartmouth Conference). At this conference, the term "artificial intelligence" was
+                        first introduced by John McCarthy, Marvin Minsky, Nathaniel Rochester, and Claude Shannon.</p>
+                </div>
+                <div class="order-1 hidden md:flex w-5/12"></div>
+            </div>
+
+            <div class="mb-8 flex justify-between items-center w-full right-timeline" data-aos="fade-left">
+                <div class="order-1 hidden md:flex w-5/12"></div>
+                <div class="order-1 w-full md:w-5/12 px-6 py-4 bg-gray-800 rounded-lg shadow-md">
+                    <h3 class="font-bold text-white text-xl">Early Development</h3>
+                    <p class="text-sm mb-3 leading-snug tracking-wide text-gray-400 text-opacity-100">1950s - 1960s</p>
+                    <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">Researchers began
+                        developing AI programs capable of performing simple tasks such as playing chess and solving
+                        logical problems. One famous program from this period is the "Logic Theorist" developed by Allen
+                        Newell and Herbert A. Simon in 1955.</p>
+                </div>
+            </div>
+
+            <div class="mb-8 flex justify-between items-center w-full left-timeline" data-aos="fade-right">
+                <div class="order-1 w-full md:w-5/12 px-6 py-4 bg-gray-800 rounded-lg shadow-md">
+                    <h3 class="font-bold text-white text-xl">Optimism and Setbacks</h3>
+                    <p class="text-sm mb-3 leading-snug tracking-wide text-gray-400 text-opacity-100">1970s</p>
+                    <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">There was a wave of great
+                        optimism in AI development. However, the limitations of computer technology and difficulties in
+                        developing truly intelligent systems led to a period known as the "AI Winter," where research
+                        funding and interest in AI drastically declined.</p>
+                </div>
+                <div class="order-1 hidden md:flex w-5/12"></div>
+            </div>
+
+            <div class="mb-8 flex justify-between items-center w-full right-timeline" data-aos="fade-left">
+                <div class="order-1 hidden md:flex w-5/12"></div>
+                <div class="order-1 w-full md:w-5/12 px-6 py-4 bg-gray-800 rounded-lg shadow-md">
+                    <h3 class="font-bold text-white text-xl">AI Revival</h3>
+                    <p class="text-sm mb-3 leading-snug tracking-wide text-gray-400 text-opacity-100">1980s</p>
+                    <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">AI revived with the
+                        emergence of expert systems designed to mimic the knowledge and decision-making processes of
+                        human experts in specific fields. Expert systems such as MYCIN in the medical field became
+                        successful examples.</p>
+                </div>
+            </div>
+
+            <div class="mb-8 flex justify-between items-center w-full left-timeline" data-aos="fade-right">
+                <div class="order-1 w-full md:w-5/12 px-6 py-4 bg-gray-800 rounded-lg shadow-md">
+                    <h3 class="font-bold text-white text-xl">Modern Advances</h3>
+                    <p class="text-sm mb-3 leading-snug tracking-wide text-gray-400 text-opacity-100">1990s - 2000s</p>
+                    <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">Advances in computer
+                        technology, especially in processing speed and storage capacity, enabled the development of more
+                        complex AI algorithms. Machine learning and neural networks began to develop rapidly.</p>
+                </div>
+                <div class="order-1 hidden md:flex w-5/12"></div>
+            </div>
+
+            <div class="mb-8 flex justify-between items-center w-full right-timeline" data-aos="fade-left">
+                <div class="order-1 hidden md:flex w-5/12"></div>
+                <div class="order-1 w-full md:w-5/12 px-6 py-4 bg-gray-800 rounded-lg shadow-md">
+                    <h3 class="font-bold text-white text-xl">Era of Deep Learning</h3>
+                    <p class="text-sm mb-3 leading-snug tracking-wide text-gray-400 text-opacity-100">2010s - Present
+                    </p>
+                    <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">Deep learning, a branch of
+                        machine learning that uses very deep neural networks, has led to major breakthroughs in various
+                        AI applications such as image recognition, natural language processing, and autonomous vehicles.
+                        Major tech companies like Google, Facebook, and Microsoft invest heavily in AI research and
+                        development.</p>
+                </div>
+            </div>
+
+            <div class="mb-8 flex justify-between items-center w-full left-timeline" data-aos="fade-right">
+                <div class="order-1 w-full md:w-5/12 px-6 py-4 bg-gray-800 rounded-lg shadow-md">
+                    <h3 class="font-bold text-white text-xl">Future of AI</h3>
+                    <p class="text-sm mb-3 leading-snug tracking-wide text-gray-400 text-opacity-100">Present</p>
+                    <p class="text-sm leading-snug tracking-wide text-white text-opacity-100">AI continues to develop
+                        rapidly, with increasingly wide and diverse applications. Ethical and safe AI development
+                        becomes a crucial focus amid the growing capabilities and adoption of AI technology across
+                        various sectors.</p>
+                </div>
+                <div class="order-1 hidden md:flex w-5/12"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-8 md:pt-8">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col mx-6 md:mx-0 md:flex-row md:space-x-32">
+                <div class="about mb-6 md:mb-0 md:w-2/3">
+                    <h4 class="font-bold text-base md:text-xl mb-4">Kun Fayakun</h4>
+                    <p class="mb-4 text-xs md:text-base">Kun Fayakun, a passionate team of aspiring web designer from
+                        Politeknik
+                        Negeri Jakarta, with creativity as our cornerstone and innovation as our core values, we're
+                        ready to
+                        showcase our skills at the iTechno 2024 Web Design Competition. Our team name, "Kun Fayakun"
+                        which
+                        translates to "Jadilah, maka jadilah." represents our ability to transform ideas into reality
+                        through the
+                        power of web design.</p>
+                </div>
+                <div class="contact-info md:w-1/3 flex flex-col">
+                    <h4 class="font-bold text-base md:text-xl mb-4">Our Socials</h4>
+                    <div class="text-xs md:text-base space-y-4 w-full">
+                        <div class="flex flex-col">
+                            <p>Muhammad Fajrul Falah</p>
+                            <div class="social-icons flex md:space-x-4">
+                                <a href="https://www.instagram.com/fajrul.falah28/"
+                                    class="bg-medium-gray pr-2 py-2 rounded text-xl md:text-base"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/muhammad-fajrul-falah-213100231/"
+                                    class="bg-medium-gray p-2 rounded text-xl md:text-base"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/fajrulfalah28"
+                                    class="bg-medium-gray p-2 rounded text-xl md:text-base"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <p>Ahmad Zainul Mufid</p>
+                            <div class="social-icons flex md:space-x-4">
+                                <a href="https://www.instagram.com/ahmadzainulmfd_/"
+                                    class="bg-medium-gray pr-2 py-2 rounded text-xl md:text-base"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/ahmad-zainul-mufid-b29b91219/"
+                                    class="bg-medium-gray p-2 rounded text-xl md:text-base"><i
+                                        class="fab fa-linkedin-in"></i></a>
+                                <a href="https://github.com/ahmadzainulmufid/"
+                                    class="bg-medium-gray p-2 text-xl md:text-base rounded"><i
+                                        class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="border-gray-700 my-8">
+        <div class="text-center text-xs md:text-base">
+            <p>Kun Fayakun © 2024, All Rights Reserved</p>
+        </div>
+    </footer>
+
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.classList.toggle("hidden");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kun Fayakun</title>
+  <link rel="stylesheet" href="CSS/font.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&display=block">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes robot-hand-animation {
+      0% {
+        transform: translateX(-5%);
+      }
+
+      50% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(-5%);
+      }
+    }
+
+    .animate-robot-hand {
+      animation: robot-hand-animation 7s infinite ease-in-out;
+    }
+  </style>
+  <style>
+    @keyframes human-hand-animation {
+      0% {
+        transform: translateX(+5%);
+      }
+
+      50% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(+5%);
+      }
+    }
+
+    .animate-human-hand {
+      animation: human-hand-animation 7s infinite ease-in-out;
+    }
+  </style>
+  <style>
+    .scroller__inner {
+      padding-block: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .scroller[data-animated="true"] {
+      overflow: hidden;
+      -webkit-mask: linear-gradient(90deg,
+          transparent,
+          white 20% 80%,
+          transparent);
+      mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    }
+
+    .scroller[data-animated="true"] .scroller__inner {
+      width: max-content;
+      flex-wrap: nowrap;
+      animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+    }
+
+    .scroller[data-direction="right"] {
+      --_animation-direction: reverse;
+    }
+
+    .scroller[data-direction="left"] {
+      --_animation-direction: forwards;
+    }
+
+    .scroller[data-speed="fast"] {
+      --_animation-duration: 20s;
+    }
+
+    .scroller[data-speed="slow"] {
+      --_animation-duration: 40s;
+    }
+
+    .scroller[data-animated="true"] .scroller__inner:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scroll {
+      to {
+        transform: translate(calc(-50% - 0.5rem));
+      }
+    }
+
+    .tag-list {
+      margin: 0;
+      padding-inline: 0;
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-950 text-white text-body overflow-x-hidden">
+  <nav class="hidden md:flex py-6 navbar bg-transparent">
+    <div class="container mx-auto flex justify-between items-center">
+      <div>
+        <a href="#" class="text-white font-bold text-2xl">Kun Fayakun</a>
+      </div>
+      <div>
+        <ul class="flex space-x-8">
+          <li><a href="index.html" class="hover:text-cyan-300 underline underline-offset-2 decoration-cyan-300">Home</a>
+          </li>
+          <li><a href="history.html" class="hover:text-cyan-300">History</a></li>
+          <li><a href="implementation.html" class="hover:text-cyan-300">Implementation</a></li>
+          <li><a href="team.html" class="hover:text-cyan-300">Team</a></li>
+          <li><a href="source.html" class="hover:text-cyan-300">Source</a></li>  
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="flex md:hidden py-6 navbar bg-transparent ">
+    <div class="container mx-auto flex flex-col">
+      <div class="flex flex-row justify-between items-center px-6">
+        <a href="#" class="text-white font-bold text-2xl">Kun Fayakun</a>
+        <span class="material-icons" onclick="toggleMenu()">menu</span>
+      </div>
+      <div id="menu" class="hidden">
+        <ul class="flex flex-col mt-6 space-y-2 justify-center items-center w-full">
+          <li class="w-full">
+            <a href="index.html" class="block px-6 py-2 bg-cyan-500 text-gray-950 font-bold rounded-md">Home</a>
+          </li>
+          <li class="w-full">
+            <a href="history.html" class="block px-6 py-2 hover:bg-gray-700 rounded-md">History</a>
+          </li>
+          <li class="w-full">
+            <a href="implementation.html" class="block px-6 py-2 hover:bg-gray-700 rounded-md">Implementation</a>
+          </li>
+          <li class="w-full">
+            <a href="team.html" class="block px-6 py-2 hover:bg-gray-700 rounded-md">Team</a>
+          </li>
+          <li class="w-full">
+            <a href="source.html" class="block px-6 py-2 hover:bg-gray-700 rounded-md">Source</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mx-auto flex items-center justify-center flex-col overflow-x-hidden">
+    <a
+      class="hidden md:block bg-gradient-to-br from-cyan-500 to-cyan-200 bg-clip-text text-transparent font-bold text-8xl text-center pt-12 bg-cover mt-12 pb-8">Webcrafting
+      Futures</a>
+    <a
+      class="md:hidden bg-gradient-to-br from-cyan-500 to-cyan-200 bg-clip-text text-transparent font-bold text-5xl text-center pt-12 bg-cover mt-12 pb-4">Webcrafting
+      <br>Futures</a>
+    <a class="text-white text-mono text-xs md:text-base text-center ">Navigating Innovation Online</a>
+  </div>
+  <div class="flex justify-between items-end mt-24 overflow-x-hidden">
+    <div class="w-1/2 aspect-w-1 aspect-h-1 mb-12 md:mb-24 lg:mb-36 animate-robot-hand ">
+      <img src="Gambar/Robot Hand.png" alt="My Image" class="w-12/12 h-3/4 object-contain">
+    </div>
+    <div class="w-1/2 aspect-w-1 aspect-h-1 flex justify-end animate-human-hand">
+      <img src="Gambar/Human Hand.png" alt="My Image" class="w-12/12 h-3/4 object-contain">
+    </div>
+  </div>
+
+
+  <div class="flex justify-between mt-64 md:mt-32 mb-32 md:mb-64 md:items-center flex-col md:flex-row">
+    <div data-aos="fade-right" data-aos-duration="1000" class="md:w-1/2 md:w-1/3 pb-12">
+      <img class="h-64 md:h-full" src="Gambar/Robot 1.png" alt="My Image">
+    </div>
+    <div data-aos="fade-up" data-aos-duration="1000" class="md:w-5/6 px-12 md:px-32 flex flex-col">
+      <p
+        class="font-bold text-2xl md:text-4xl mb-4 bg-gradient-to-br from-cyan-500 to-cyan-200 bg-clip-text text-transparent">
+        What
+        is AI?</p>
+      <p class="text-mono text-xs md:text-base font-light mb-4">AI, or artificial intelligence, is like giving a
+        computer the ability to
+        think and learn. Imagine teaching a computer to recognize patterns, make decisions, and even solve problems.
+        That's essentially what AI is. It's about creating intelligent systems that can mimic human thought processes.
+        From self-driving cars to medical diagnoses, AI is being used to tackle complex challenges and improve our
+        lives.</p>
+      <p class="text-mono text-xs md:text-base font-light">Think of AI as a powerful tool that can be used for many
+        purposes. It's like
+        having a super smart assistant that can help us with everything from finding information to creating art. <span
+          class="font-black text-yellow-100">The possibilities are endless, and the future of AI is exciting to
+          imagine.</span></p>
+    </div>
+  </div>
+
+  <div class="flex justify-between md:mt-32 mb-0 md:mb-64 items-center flex-col">
+    <div data-aos="fade-up" data-aos-duration="1000" class="flex flex-col">
+      <p
+        class="font-bold text-2xl md:text-4xl mb-4 bg-gradient-to-br from-cyan-500 to-cyan-200 bg-clip-text text-transparent">
+        Most
+        used generative AI</p>
+    </div>
+    <div data-aos="fade-up" data-aos-duration="1000" class="flex flex-col w-4/5 md:w-3/5 overflow-x-hidden">
+      <div class="scroller" data-direction="right" data-speed="fast">
+        <div class="scroller__inner tag-list md:space-x-12">
+          <a href="https://www.chatgpt.com" target="_blank"
+            class="inline-block w-[100px] h-[50px] md:w-[200px] md:h-[100px] overflow-hidden relative">
+            <img src="Gambar/ChatGPT.png" alt="" class="w-full h-full object-contain" />
+          </a>
+          <a href="https://www.deepl.com" target="_blank"
+            class="inline-block w-[75px] h-[50px] md:w-[150px] md:h-[100px] overflow-hidden relative">
+            <img src="Gambar/DeepL.png" alt="" class="w-full h-full object-contain" />
+          </a>
+          <a href="https://www.midjourney.com" target="_blank"
+            class="inline-block w-[100px] h-[50px] md:w-[200px] md:h-[100px] overflow-hidden relative">
+            <img src="Gambar/Midjourney.png" alt="" class="w-full h-full object-contain" />
+          </a>
+          <a href="https://www.github.com/features/copilot" target="_blank"
+            class="inline-block w-[150px] h-[50px] md:w-[300px] md:h-[100px] overflow-hidden relative">
+            <img src="Gambar/GitHubCopilot.png" alt="" class="w-full h-full object-contain" />
+          </a>
+          <a href="https://www.anthropic.com/claude" target="_blank"
+            class="inline-block w-[100px] h-[50px] md:w-[200px] md:h-[100px] overflow-hidden relative">
+            <img src="Gambar/Claude.png" alt="" class="w-full h-full object-contain" />
+          </a>
+          <a href="https://www.quillbot.com" target="_blank"
+            class="inline-block w-[100px] h-[50px] md:w-[200px] md:h-[100px] overflow-hidden relative">
+            <img src="Gambar/Quillbot.png" alt="" class="w-full h-full object-contain" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="container mx-auto flex flex-col lg:flex-row justify-center mt-32 mb-32 md:mb-64 items-center lg:space-x-32">
+    <p data-aos="fade-up" data-aos-duration="1000"
+      class="font-bold text-2xl text-center md:text-left md:text-4xl mb-6 mx-6 md:mb-12 lg:mb-0 bg-gradient-to-br from-cyan-500 to-cyan-200 bg-clip-text text-transparent">
+      How can it improve our lifes?</p>
+    <div class="flex flex-col px-6 md:px-0 lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6">
+      <div class="flex flex-col space-y-6 lg:w-1/2">
+        <div data-aos="fade-up" data-aos-duration="1000" class="bg-gray-800 rounded-lg shadow-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Amplified Human Potential</h3>
+          <p class="text-xs md:text-base text-gray-400 mb-4">AI will become our partner, enhancing our abilities and
+            allowing us to focus on
+            creativity and problem-solving. Together, humans and AI can achieve breakthroughs that were once
+            unimaginable.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" class="bg-gray-800 rounded-lg shadow-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Global Collaboration</h3>
+          <p class="text-xs md:text-base text-gray-400 mb-4">AI will facilitate seamless communication and cooperation
+            across cultures and
+            borders. By breaking down language and cultural barriers, we can tackle global challenges together more
+            effectively.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" class="bg-gray-800 rounded-lg shadow-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Shared Knowledge and Innovation</h3>
+          <p class="text-xs md:text-base text-gray-400 mb-4">AI will act as a knowledge hub, connecting experts from
+            different fields. This
+            collaboration will spark new ideas and accelerate innovation.</p>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-6 lg:w-1/2 justify-center items-center">
+        <div data-aos="fade-up" data-aos-duration="1000" class="bg-gray-800 rounded-lg shadow-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Community Empowerment</h3>
+          <p class="text-xs md:text-base text-gray-400 mb-4">AI can help communities identify their needs and develop
+            solutions together. By
+            providing data-driven insights, AI can empower people to create positive change.</p>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" class="bg-gray-800 rounded-lg shadow-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Ethical and Responsible Development</h3>
+          <p class="text-xs md:text-base text-gray-400 mb-4">AI will encourage collaboration among technologists,
+            ethicists, and
+            policy-makers to ensure that it is created and used ethically. This shared commitment will increase trust
+            and confidence in AI.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto flex justify-center mt-0 md:mt-32 mb-32 md:mb-64 items-center flex-col">
+    <p data-aos="fade-up" data-aos-duration="1000"
+      class="font-bold text-center text-2xl md:text-4xl mx-6 mb-6 md:mb-12 bg-gradient-to-br from-red-500 to-red-200 bg-clip-text text-transparent">
+      And the worst cases if it dont?</p>
+    <div class="flex flex-col px-6 md:px-0 lg:flex-row space-y-6 lg:space-y-0 lg:space-x-6">
+      <div class="flex flex-col space-y-6 lg:w-3/12 justify-center">
+        <div data-aos="fade-up" data-aos-duration="1000" class="bg-gray-800 rounded-lg shadow-lg p-6">
+          <h3 class="text-xl md:text-2xl font-bold text-white">Wall-E <span
+              class="text-xs pl-1 md:pl-0 md:text-sm font-normal text-gray-400">2008</span></h3>
+          <p class="text-xs md:text-base text-gray-400 mb-4">Film WALL-E taken as an example.</p>
+          <div class="lg:aspect-[2/3] rounded-lg overflow-hidden text-center">
+            <video class="w-full h-full object-cover" autoplay loop muted>
+              <source src="Gambar/Wall-E Clip.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col space-y-6 lg:w-9/12 justify-center items-center">
+        <div data-aos="fade-up" data-aos-duration="1000"
+          class="flex flex-col justify-center bg-gray-800 rounded-lg shadow-lg p-6 h-auto">
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Rise of the Machines</h3>
+          <p class="text-xs md:text-base text-gray-400 mb-4">In the world of Wall-E, we see a future where robots and
+            computers have taken over, and it's not as fun as it might sound. The movie shows us what could happen if
+            the machines we create to help us end up running the show instead. Imagine a world where AI doesn't just
+            follow our orders but starts making its own choices - and those choices aren't always in our best interest.
+            In Wall-E's world, humans have become so reliant on their robotic helpers that they've lost control, ending
+            up as passive passengers on a spaceship while machines manage every aspect of their lives.</p>
+        </div>
+        <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 h-full">
+          <div data-aos="fade-up" data-aos-duration="1000"
+            class="flex flex-col justify-center bg-gray-800 rounded-lg shadow-lg p-6 h-auto">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Jobless Future</h3>
+            <p class="text-xs md:text-base text-gray-400 mb-4">The film also paints a picture of what happens when
+              automation goes too far. In Wall-E's future, robots do all the work, leaving humans with nothing to do but
+              lounge in floating chairs, sipping sodas, and staring at screens. This complete automation has eliminated
+              the need for human labor, resulting in a society where traditional jobs and careers no longer exist. From
+              maintenance to food production, from governance to entertainment, every task is handled by AI and robots.
+            </p>
+          </div>
+          <div data-aos="fade-up" data-aos-duration="1000"
+            class="flex flex-col justify-center bg-gray-800 rounded-lg shadow-lg p-6 h-auto">
+            <h3 class="text-xl md:text-2xl font-bold text-white mb-4">Dangers of Living Without Effort</h3>
+            <p class="text-xs md:text-base text-gray-400 mb-4">This might sound like a dream vacation at first, but it's
+              led to a big problem. People have become incredibly lazy and unhealthy, forgetting how to do even the
+              simplest tasks for themselves. And with machines doing all the jobs, there's no work left for humans. It's
+              a warning about how too much convenience and automation might make our lives easier in the short term, but
+              could have some pretty serious long-term consequences for our society and our planet.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto flex justify-center mt-0 md:mt-32 mb-32 md:mb-64 items-center flex-col">
+    <p data-aos="fade-up" data-aos-duration="1000"
+      class="font-bold text-2xl mb-2 md:text-4xl bg-gradient-to-br from-cyan-500 to-cyan-200 bg-clip-text text-transparent">
+      It's not done yet!</p>
+    <a data-aos="fade-up" data-aos-duration="1000"
+      class="text-white text-mono text-xs md:text-base text-center mx-12 md:mx-0 mb-8">Learn more about the history, or
+      check this video explaining AI in a comprehensive way.</a>
+    <a data-aos="fade-up" data-aos-duration="1000" href="history.html"
+      class="inline-flex items-center px-4 py-2 bg-gradient-to-br from-cyan-500 to-cyan-200 hover:from-cyan-600 hover:to-cyan-300 text-gray-950 font-bold rounded-full text-base md:text-lg mb-6 md:mb-12 hover:shadow-[0_4px_24px_rgba(255,255,255,0.25)]">
+      Learn More
+      <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </a>
+    <div data-aos="fade-up" data-aos-duration="1000"
+      class="w-3/4 md:w-2/3 md:w-3/4 lg:w-2/3 bg-gray-800 rounded-lg overflow-hidden">
+      <div class="aspect-video">
+        <iframe src="https://www.youtube.com/embed/8nkQZh712LQ?si=qQLv9ieLmXSka7T1" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+          class="w-full h-full"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto flex justify-center mt-0 md:mt-32 mb-32 items-center flex-col">
+    <img src=".idx/icon.png" alt="Gemini" class="w-12 h-12 mb-6" />
+    <p data-aos="fade-up" data-aos-duration="1000"
+      class="font-bold text-2xl mb-2 md:text-4xl bg-gradient-to-tr from-cyan-500 via-indigo-400 to-rose-500 bg-clip-text text-transparent">
+      Ready to try?</p>
+    <a data-aos="fade-up" data-aos-duration="1000"
+      class="text-white text-mono text-xs md:text-base text-center mx-12 lg:mx-96 mb-8">Now that you have learn a lot,
+      you can use Gemini AI from Google for your own purposes, it's worth
+      trying!</a>
+    <a data-aos="fade-up" data-aos-duration="1000" href="implementation.html"
+      class="inline-flex items-center px-6 py-2 bg-gradient-to-tr from-cyan-500 via-indigo-400 to-rose-500 hover:from-indigo-400 hover:to-rose-500 text-gray-950 font-bold rounded-full text-base md:text-lg mb-6 md:mb-12 hover:shadow-[0_4px_24px_rgba(255,255,255,0.25)]">
+      Try Now
+      <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd"
+          d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </a>
+  </div>
+
+  <footer class="bg-gray-800 text-white py-8 md:pt-8">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="flex flex-col mx-6 md:mx-0 md:flex-row md:space-x-32">
+        <div class="about mb-6 md:mb-0 md:w-2/3">
+          <h4 class="font-bold text-base md:text-xl mb-4">Kun Fayakun</h4>
+          <p class="mb-4 text-xs md:text-base">Kun Fayakun, a passionate team of aspiring web designer from
+            Politeknik
+            Negeri Jakarta, with creativity as our cornerstone and innovation as our core values, we're
+            ready to
+            showcase our skills at the iTechno 2024 Web Design Competition. Our team name, "Kun Fayakun"
+            which
+            translates to "Jadilah, maka jadilah." represents our ability to transform ideas into reality
+            through the
+            power of web design.</p>
+        </div>
+        <div class="contact-info md:w-1/3 flex flex-col">
+          <h4 class="font-bold text-base md:text-xl mb-4">Our Socials</h4>
+          <div class="text-xs md:text-base space-y-4 w-full">
+            <div class="flex flex-col">
+              <p>Muhammad Fajrul Falah</p>
+              <div class="social-icons flex md:space-x-4">
+                <a href="https://www.instagram.com/fajrul.falah28/"
+                  class="bg-medium-gray pr-2 py-2 rounded text-xl md:text-base"><i
+                    class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/muhammad-fajrul-falah-213100231/"
+                  class="bg-medium-gray p-2 rounded text-xl md:text-base"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/fajrulfalah28" class="bg-medium-gray p-2 rounded text-xl md:text-base"><i
+                    class="fab fa-github"></i></a>
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <p>Ahmad Zainul Mufid</p>
+              <div class="social-icons flex md:space-x-4">
+                <a href="https://www.instagram.com/ahmadzainulmfd_/"
+                  class="bg-medium-gray pr-2 py-2 rounded text-xl md:text-base"><i
+                    class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/ahmad-zainul-mufid-b29b91219/"
+                  class="bg-medium-gray p-2 rounded text-xl md:text-base"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/ahmadzainulmufid/"
+                  class="bg-medium-gray p-2 text-xl md:text-base rounded"><i class="fab fa-github"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="border-gray-700 my-8">
+    <div class="text-center text-xs md:text-base">
+      <p>Kun Fayakun © 2024, All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+  function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.classList.toggle("hidden");
+  }
+</script>
+<script>
+  const scrollers = document.querySelectorAll(".scroller");
+
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    addAnimation();
+  }
+
+  function addAnimation() {
+    scrollers.forEach((scroller) => {
+      scroller.setAttribute("data-animated", true);
+
+      const scrollerInner = scroller.querySelector(".scroller__inner");
+      const scrollerContent = Array.from(scrollerInner.children);
+
+      scrollerContent.forEach((item) => {
+        const duplicatedItem = item.cloneNode(true);
+        duplicatedItem.setAttribute("image-hidden", true);
+        scrollerInner.appendChild(duplicatedItem);
+      });
+    });
+  }
+</script>
+
+</html>
