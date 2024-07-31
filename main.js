@@ -60,7 +60,7 @@ form.onsubmit = async (ev) => {
       contents[0].parts.push({ inline_data: { mime_type: 'image/jpeg', data: imageBase64 } });
     }
     contents[0].parts.push({
-      text: `Talk like you're a human ${promptInput.value} but limit it to 500 characters. Add an invisible space between paragraphs.`
+      text: `Talk like you're a human ${promptInput.value} Add an invisible space / break the line between paragraphs.`
     });
 
     // Save the prompt to the chat history
