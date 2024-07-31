@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&display=block">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @keyframes robot-hand-animation {
@@ -180,17 +181,23 @@
         class="font-bold text-2xl md:text-4xl mb-4 bg-gradient-to-br from-cyan-500 to-cyan-200 bg-clip-text text-transparent">
         What
         is AI?</p>
-      <p class="text-mono text-xs md:text-base font-light mb-4">AI, or artificial intelligence, is like giving a
-        computer the ability to
-        think and learn. Imagine teaching a computer to recognize patterns, make decisions, and even solve problems.
-        That's essentially what AI is. It's about creating intelligent systems that can mimic human thought processes.
-        From self-driving cars to medical diagnoses, AI is being used to tackle complex challenges and improve our
-        lives.</p>
-      <p class="text-mono text-xs md:text-base font-light">Think of AI as a powerful tool that can be used for many
-        purposes. It's like
-        having a super smart assistant that can help us with everything from finding information to creating art. <span
-          class="font-black text-yellow-100">The possibilities are endless, and the future of AI is exciting to
-          imagine.</span></p>
+      <div class="text-mono text-xs md:text-base font-light mb-4" id="typed-text-1"></div>
+      <div class="text-mono text-xs md:text-base font-light" id="typed-text-2"></div>
+      <script>
+        new TypeIt("#typed-text-1", {
+          speed: 30,
+          waitUntilVisible: true
+        })
+          .type("AI, or artificial intelligence, is like giving a computer the ability to think and learn. Imagine teaching a computer to recognize patterns, make decisions, and even solve problems. That's essentially what AI is. It's about creating intelligent systems that can mimic human thought processes. From self-driving cars to medical diagnoses, AI is being used to tackle complex challenges and improve our lives.")
+          .go();
+
+        new TypeIt("#typed-text-2", {
+          speed: 50,
+          waitUntilVisible: true
+        })
+          .type("Think of AI as a powerful tool that can be used for many purposes. It's like having a super smart assistant that can help us with everything from finding information to creating art. <span class=\"font-black text-yellow-100\">The possibilities are endless, and the future of AI is exciting to imagine.</span>")
+          .go();
+      </script>
     </div>
   </div>
 
