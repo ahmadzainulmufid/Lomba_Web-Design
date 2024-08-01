@@ -2,7 +2,7 @@ import { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from "@google/ge
 import Base64 from 'base64-js';
 import MarkdownIt from 'markdown-it';
 import { maybeShowApiKeyBanner } from './gemini-api-banner';
-import './style.css';
+// import './style.css';
 
 let API_KEY = 'AIzaSyAniUBMi3Mgos4XhB1yZ60w39hqHvJ81DQ'; // Replace with your actual API key
 
@@ -114,4 +114,4 @@ form.onsubmit = async (ev) => {
 maybeShowApiKeyBanner(API_KEY);
 
 // Periodically update chat history
-setInterval(displayChatHistory, 1000);
+// setInterval(displayChatHistory, 1000);
